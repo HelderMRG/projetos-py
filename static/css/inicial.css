@@ -1,0 +1,147 @@
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #090909;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    height: 30px;
+}
+
+body {
+    background: #161616;
+    color: #fff;
+    font-family: "Source Code Pro", monospace;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    margin: 0rem;
+}
+
+.box {
+    margin: 2rem auto;
+    max-width: 40ch;
+    border: 8px solid #0038FF;
+    color: #fff;
+    padding: 2ch;
+    position: relative;
+    border-radius: 15px;
+}
+
+p {
+    margin: 0;
+    color: #f00;
+
+}
+
+p+p {
+    margin-top: 1ch;
+}
+
+section h1 {
+    font-size: 18px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    height: 30px;
+    width: 100%;
+    position: fixed;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav li:hover {
+    color: #666;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: solid;
+}
+
+.carrinho {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    margin-right: 7%;
+}
+
+.carrinho:hover img {
+    position: absolute;
+    top: 0px;
+    right: -40;
+}
+
+.text {
+    display: none;
+    padding: 5px;
+    border-radius: 5px;
+    top: 20px;
+    right: 0px;
+    z-index: 1;
+    font-size: 18px;
+    white-space: nowrap;
+    cursor: pointer;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+}
+
+#busca {
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+#busca h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#busca button[type="submit"] {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#campo-busca {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.carrinho:hover .text {
+    display: inline-block;
+
+}

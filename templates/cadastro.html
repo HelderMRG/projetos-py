@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO</title>
+    <link rel="stylesheet" href="../static/css/cadastro.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href=""></a> INICIAL </li>
+                <li class="btnLogin"><a href=""></a> LOGIN</li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="tipoCadastro">
+        <h1> CADASTRO</h1>
+        <label for="selecionarTipoCadastro">Vender ou Comprar</label>
+        <select name="selecionarTipoCadastro" id="selecionarTipoCadastro">
+            <option value="vendedor">VENDEDOR</option>
+            <option value="cliente">CLIENTE</option>
+        </select>
+        <button type="submit">CONTINUAR</button>
+    </form>
+
+    <h1 id="tituloVendedor">Cadastrar Produtos para Venda</h1>
+    <h1 id="tituloCliente">Cadastrar-se Cliente para Comprar</h1>
+
+    <form action="#" id="vendedorCadastro" method="post">
+        <h1>CADASTRO VENDEDOR</h1>
+        <p id="msgErroVendedor">SENHAS NÃO PODEM SER DIFERENTES</p>
+        <label for="emailVendedor">EMAIL</label>
+        <input type="email" name="emailVendedor" id="emailVendedor">
+        <label for="nomeVendedor">NOME</label>
+        <input type="text" name="nomeVendedor" id="nomeVendedor">
+        <label for="pixVendedor">CHAVE PIX</label>
+        <input type="text" name="pixVendedor" id="pixVendedor">
+        <label for="senhaVendedor">SENHA</label>
+        <input type="password" name="senhaVendedor" id="senhaVendedor">
+        <label for="repetirSenhaVendedor">DIGITAR SENHA NOVAMENTE</label>
+        <input type="password" name="repetirSenhaVendedor" id="repetirSenhaVendedor">
+        <input type="submit" value="ENVIAR">
+    </form>
+
+    <form action="/cadastroCliente" id="clienteCadastro" method="post">
+        <h1>CADASTRO CLIENTE</h1>
+        <p id="msgErroCliente">SENHAS NÃO PODEM SER DIFERENTES</p>
+        <label for="emailCliente">EMAIL</label>
+        <input type="email" name="emailCliente" id="emailCliente">
+        <label for="nomeCliente">NOME</label>
+        <input type="text" name="nomeCliente" id="nomeCliente">
+        <label for="senhaCliente">SENHA</label>
+        <input type="password" name="senhaCliente" id="senhaCliente">
+        <label for="repetirSenhaCliente">DIGITAR SENHA NOVAMENTE</label>
+        <input type="password" name="repetirSenhaCliente" id="repetirSenhaCliente">
+        <input type="submit" value="ENVIAR">
+    </form>
+
+
+
+
+
+    <footer>
+        <p> <small> 2023 hgStudios &trade; </small></p>
+    </footer>
+
+    <script src="../static/javascript/cadastro.js"></script>
+</body>
+
+</html>

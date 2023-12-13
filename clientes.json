@@ -1,0 +1,38 @@
+[
+    {
+        "nome": "helder",
+        "email": "teste@teste.com.br",
+        "senha": "123",
+        "foto": "",
+        "carrinho": {},
+        "total_preco": 0.0,
+        "historico": {}
+    },
+    {
+        "nome": "helder2",
+        "email": "teste2@teste.com.br",
+        "senha": "111",
+        "foto": "",
+        "carrinho": {},
+        "total_preco": 0.0,
+        "historico": {}
+    },
+    {
+        "nome": "helder",
+        "email": "helder_@email.com",
+        "senha": "xxx",
+        "foto": "",
+        "carrinho": {},
+        "total_preco": 0.0,
+        "historico": {}
+    },
+    {
+        "nome": "HELDER",
+        "email": "helder_@helder.com",
+        "senha": "999",
+        "foto": "",
+        "carrinho": {},
+        "total_preco": 0.0,
+        "historico": {}
+    }
+]

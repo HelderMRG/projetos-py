@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN CLIENTE</title>
+    <link rel="stylesheet" href="../static/css/login.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href=""></a> INICIAL </li>
+                <li class="btncadastrar"><a href="/cadastrar"> CADASTRAR</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="titulo">Bem vindo Prezado Cliente!</h1>
+    <form action="/acessoCliente" method="post">
+        <h1>LOGIN CLIENTE</h1>
+
+        <label for="emailCliente">Email</label>
+        <input type="email" name="emailCliente" id="emailCliente" placeholder="E-mail" required>
+        <label for="senhaCliente">Senha</label>
+        <input type="password" name="senhaCliente" id="senhaCliente" placeholder="Senha" required>
+        <input type="submit" value="Entrar">
+        <div class="esqueceu-senha">
+            Esqueceu sua senha? <a href="#"> Recuperar Senha </a>
+        </div>
+    </form>
+    <footer>
+        <p> <small> 2023 hgStudios &trade; </small></p>
+    </footer>
+</body>
+
+</html>

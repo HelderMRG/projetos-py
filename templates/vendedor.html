@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PERFIL VENDEDOR</title>
+    <link rel="stylesheet" href="../static/css/vendedor.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href=""></a> INICIAL </li>
+                <li class="sair"><a href=""></a>SAIR</li>
+            </ul>
+        </nav>
+    </header>
+    <h2 class="titulo" id="titulo">PRODUTOS</h2>
+    <main>
+
+        <aside class="perfil">
+            <img src="../static/arquivos/usuario.png" alt="foto vendedor" title="Enviar Foto" id="foto_vendedor">
+            <br>
+            <h1 class="nome">Helder</h1>
+            <h3 class="menu_perfil" id="escolha_formulario_senha">Alterar Senha</h3>
+            <h3 class="menu_perfil" id="escolha_formulario_produtos">Enviar Produtos</h3>
+            <h3 class="apagar_conta" id="apagar_conta">Apagar Conta Perfil</h3>
+        </aside>
+
+        <div id="formulario_produtos" class="formulario_produos">
+            <form action="#" id="enviar_produtos" method="post" enctype="multipart/form-data">
+                <label for="foto">FOTO</label>
+                <input type="file" name="foto" id="foto">
+                <label for="nome">NOME</label>
+                <input type="text" name="nome" id="nome">
+                <label for="preco">PREÇO</label>
+                <input type="number" name="preco" id="preco">
+                <label for="descricao">DESCRIÇÃO</label>
+                <input type="text" name="descricao" id="descricao">
+                <input type="hidden" name="dadosUsuario" value="dados do usuario">
+                <input type="submit" value="ENVIAR">
+
+            </form>
+        </div>
+
+        <div id="produtos" class="produtos">
+            <!-- relação de produtos" -->
+        </div>
+
+        <div id="formulario_senha">
+            <form action="#" id="formMudarSenha" method="post">
+                <label for="novaSenha">NOVA SENHA</label>
+                <input type="password" name="novaSenha" id="novaSenha" placeholder="Digite a Nova Senha" required>
+                <label for="repetirNovaSenha">REPETIR SENHA</label>
+                <input type="password" name="repetirNovaSenha" id="repetirNovaSenha" placeholder="Repetir a Senha"
+                    required>
+                <input type="hidden" name="dadosUsuario" value="dados do usuario">
+                <input type="submit" value="SALVAR">
+            </form>
+
+        </div>
+
+        <div id="modal_apagarConta" class="modal_apagarConta">
+            <div class="modal-content">
+                <h4>DESEJA APAGAR A CONTA ?</h4>
+                <p class="apagarAlerta">ESSA OPÇÃO PERMANENTE E IRREVERSÍVEL</p>
+                <div class="modal-buttons">
+                    <button id="cancelarApagarConta">CANCELAR</button>
+                    <form action="#" method="post">
+                        <input type="hidden" name="emailUsuario" value="email do usuario">
+                        <input type="submit" id="confirmarApagarConta" value="CONFIRMAR">
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+
+    <footer>
+        <h3> <small> 2023 hgStudios &trade; </small></h3>
+    </footer>
+    <script src="../static/javascript/vendedor.js"></script>
+    <script>
+        document.getElementById("foto_vendedor").addEventListener("click", function () {
+            if (this.src.includes("usuario.png")) {
+                // sem imagem permitir envio da foto.
+
+            } else {
+                // com imagem somente alerta para mudança.
+                if (confirm("Você tem certeza que deseja mudar sua foto?")) {
+                    // confirmou vai enviar nova foto.
+
+                } else {
+                    // cancelou alteração.
+                    return
+                }
+            }
+
+            var modal = document.createElement("div");
+            modal.classList.add("modal");
+            modal.innerHTML = `
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="#" enctype="multipart/form-data" method="post">
+                    <input type="file" name="foto" id="foto">
+                    <input type="hidden" name="dadosUsuario" value="dados do usuario">
+                    <input type="submit" value="ENVIAR">
+                </form>
+
+            </div>
+                
+            `;
+            document.body.appendChild(modal);
+            var botaoFechar = modal.querySelector(".close");
+            botaoFechar.addEventListener("click", () => {
+                modal.remove();
+            })
+
+
+
+        })
+    </script>
+</body>
+
+</html>
